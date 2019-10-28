@@ -8,6 +8,7 @@ export const getProductsCounter = ({ products }) => products.data.length;
 export const getRequest = ({ products }) => products.request;
 export const getPages = ({ products }) =>
   Math.ceil(products.amount / products.productsPerPage);
+export const getPresentPage = ({ products }) => products.presentPage;
 export const getCartProducts = ({ products }) => {
   return products.cart.map(cartProduct => {
     return {
@@ -50,7 +51,7 @@ const initialState = {
   data: [],
   singleProduct: {},
   amount: 0,
-  productPerPage: 6,
+  productsPerPage: 6,
   presentPage: 1,
   request: {
     pending: false,
@@ -80,6 +81,7 @@ export const loadSingleProductRequest = id => {
     dispatch(startRequest());
     try {
       let res = await axios.get(`${API_URL}/products/${id}`);
+      await new Promise((resolve, reject) => setTimeout(resolve, 2000));
       dispatch(loadSingleProduct(res.data));
       dispatch(endRequest());
     } catch (e) {
@@ -88,13 +90,12 @@ export const loadSingleProductRequest = id => {
   };
 };
 
-export const loadProductByPageRequest = page => {
+export const loadProductByPageRequest = (page, productsPerPage) => {
   return async dispatch => {
     dispatch(startRequest());
     try {
-      const productPerPage = 6;
-      const startAt = (page - 1) * productPerPage;
-      const limit = productPerPage;
+      const startAt = (page - 1) * productsPerPage;
+      const limit = productsPerPage;
       let res = await axios.get(
         `${API_URL}/products/range/${startAt}/${limit}`
       );
@@ -102,7 +103,7 @@ export const loadProductByPageRequest = page => {
       const payload = {
         product: res.data.product,
         amount: res.data.amount,
-        productPerPage,
+        productsPerPage,
         presentPage: page
       };
       dispatch(loadProductByPage(payload));
@@ -123,7 +124,7 @@ export default function reducer(statePart = initialState, action = {}) {
     case LOAD_PRODUCT_PAGE:
       return {
         ...statePart,
-        productPerPage: action.payload.productPerPage,
+        productsPerPage: action.payload.productsPerPage,
         presentPage: action.payload.presentPage,
         amount: action.payload.amount,
         data: [...action.payload.product]

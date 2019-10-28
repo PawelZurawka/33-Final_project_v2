@@ -1,7 +1,7 @@
 import React from 'react';
 import { PropTypes } from 'prop-types';
 //import Button from '../../common/Button/Button';
-import SmallTitle from '../../common/SmallTitle/SmallTitle';
+//import SmallTitle from '../../common/SmallTitle/SmallTitle';
 import {
   Card,
   CardImg,
@@ -10,20 +10,16 @@ import {
   CardTitle,
   CardLink
 } from 'reactstrap';
-import ProductModal from '../ProductModal/ProductModal';
 import './ProductSummary.scss';
 
 const ProductSummary = ({ name, price, image }) => (
   <div>
-    <SmallTitle>{name}</SmallTitle>
     <Card>
       <CardImg src={image} />
       <CardBody>
         <CardTitle>{name}</CardTitle>
         <CardText>{price}</CardText>
-        <CardLink href={'/product'}>
-          <ProductModal />
-        </CardLink>
+        <CardLink href={'/product'}></CardLink>
       </CardBody>
     </Card>
   </div>

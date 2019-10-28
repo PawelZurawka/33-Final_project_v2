@@ -23,14 +23,13 @@ class Products extends React.Component {
   };
 
   render() {
-    const { products, request, pages, pagination, presentPage } = this.props;
+    const { products, request, pages, presentPage } = this.props;
     const { loadProductPage } = this;
 
     if (
       request.pending === false &&
       request.success === true &&
-      products.length > 0 &&
-      pagination === true
+      products.length > 0
     ) {
       return (
         <>
@@ -40,17 +39,6 @@ class Products extends React.Component {
             onPageChange={loadProductPage}
             initialPage={presentPage}
           />
-        </>
-      );
-    } else if (
-      request.pending === false &&
-      request.success === true &&
-      products.length > 0 &&
-      pagination === false
-    ) {
-      return (
-        <>
-          <ProductList products={products} />
         </>
       );
     } else if (request.pending === false && request.error != null) {
