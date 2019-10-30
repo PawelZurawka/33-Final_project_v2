@@ -6,7 +6,7 @@ import './NavBar.scss';
 class NavBar extends React.Component {
   state = {
     links: [
-      { path: '/products', title: 'Home' },
+      { path: '/', title: 'Home' },
       { path: '/FAQ', title: 'FAQ' },
       { path: '/rules', title: 'Rules' },
       { path: '/contact', title: 'Contact' }

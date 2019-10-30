@@ -10,7 +10,6 @@ import {
   CardTitle,
   CardLink
 } from 'reactstrap';
-import ProductModal from '../ProductModal/ProductModal';
 import './ProductSummary.scss';
 
 const ProductSummary = ({ name, price, image }) => (
@@ -20,9 +19,7 @@ const ProductSummary = ({ name, price, image }) => (
       <CardBody>
         <CardTitle>{name}</CardTitle>
         <CardText>{price}</CardText>
-        <CardLink href={'/product'}>
-          <ProductModal />
-        </CardLink>
+        <CardLink href={'/product'}></CardLink>
       </CardBody>
     </Card>
   </div>
