@@ -19,7 +19,7 @@ class ProductModal extends React.Component {
   render() {
     return (
       <div>
-        <Button color={'secondary'} onClick={this.toggle}>
+        <Button color='secondary' onClick={this.toggle}>
           More about
         </Button>
         <Modal>
@@ -29,7 +29,7 @@ class ProductModal extends React.Component {
           <ModalFooter>
             <Button color='primary' onClick={this.toggle}>
               Add to cart
-            </Button>{' '}
+            </Button>
             <Button color='secondary' onClick={this.toggle}>
               Cancel
             </Button>

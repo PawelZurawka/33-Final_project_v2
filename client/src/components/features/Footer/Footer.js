@@ -16,7 +16,7 @@ class Footer extends React.Component {
     return (
       <nav className={'footer'}>
         <span className='footer__caption'>
-          Made with passion by{' '}
+          Made by{' '}
           <a
             href='https://github.com/PawelZurawka?tab=repositories'
             target='_blank'

@@ -7,7 +7,7 @@ class SideBar extends React.Component {
   render() {
     return (
       <Container>
-        <div className={'sideBarHead'}>
+        <div className={'sidebar__header'}>
           <h1>Sort by:</h1>
         </div>
         <Row>

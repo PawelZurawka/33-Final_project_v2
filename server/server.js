@@ -21,7 +21,7 @@ app.use((req, res, next) => {
   mongoSanitize(req.body);
   next();
 });
-// Serve static files from the React app
+// // Serve static files from the React app
 app.use(express.static(path.join(__dirname, '/../client/build')));
 
 app.get('*', (req, res) => {
@@ -29,7 +29,10 @@ app.get('*', (req, res) => {
 });
 
 // connects our back end code with the database
-mongoose.connect(config.DB, { useNewUrlParser: true });
+mongoose.connect(config.DB, {
+  useUnifiedTopology: true,
+  useNewUrlParser: true
+});
 let db = mongoose.connection;
 
 db.once('open', () => {

@@ -1,7 +1,7 @@
 import React from 'react';
 import { PropTypes } from 'prop-types';
 //import Button from '../../common/Button/Button';
-import SmallTitle from '../../common/SmallTitle/SmallTitle';
+//import SmallTitle from '../../common/SmallTitle/SmallTitle';
 import {
   Card,
   CardImg,
@@ -15,7 +15,6 @@ import './ProductSummary.scss';
 
 const ProductSummary = ({ name, price, image }) => (
   <div>
-    <SmallTitle>{name}</SmallTitle>
     <Card>
       <CardImg src={image} />
       <CardBody>

@@ -4,16 +4,16 @@ import {
   getRequest,
   loadProductByPageRequest,
   resetRequest,
-  getPages
-  // getPresentPage
+  getPages,
+  getPresentPage
 } from '../../../redux/productsRedux';
 import Products from './Products';
 
 const mapStateToProps = state => ({
-  posts: getProducts(state),
+  products: getProducts(state),
   request: getRequest(state),
-  pages: getPages(state)
-  // presentPage: getPresentPage(state)
+  pages: getPages(state),
+  presentPage: getPresentPage(state)
 });
 
 const mapDispatchToProps = dispatch => ({

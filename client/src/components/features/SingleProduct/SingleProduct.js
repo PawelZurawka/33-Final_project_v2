@@ -2,7 +2,7 @@ import React from 'react';
 import { PropTypes } from 'prop-types';
 import Spinner from '../../common/Spinner/Spinner';
 import Alert from '../../common/Alert/Alert';
-import SmallTitle from '../../common/SmallTitle/SmallTitle';
+//import SmallTitle from '../../common/SmallTitle/SmallTitle';
 import { withRouter } from 'react-router-dom';
 import { Card, CardImg, CardText, CardBody, CardTitle } from 'reactstrap';
 import './SingleProduct.scss';
@@ -20,7 +20,6 @@ class SingleProduct extends React.Component {
     if (request.pending === false && request.success === true && product) {
       return (
         <div>
-          <SmallTitle>{product.name}</SmallTitle>
           <Card>
             <CardImg src={product.image} />
             <CardBody>

@@ -9,7 +9,7 @@ import Pagination from '../../common/Pagination/Pagination';
 class Products extends React.Component {
   componentDidMount() {
     const { loadProductByPage, initialPage, productPerPage } = this.props;
-    loadProductByPage(initialPage, productPerPage);
+    loadProductByPage(initialPage || 1, productPerPage || 6);
   }
 
   componentWillUnmount() {
@@ -19,18 +19,17 @@ class Products extends React.Component {
 
   loadProductPage = page => {
     const { loadProductByPage, productPerPage } = this.props;
-    loadProductByPage(page, productPerPage);
+    loadProductByPage(page, productPerPage || 6);
   };
 
   render() {
-    const { products, request, pages, pagination, presentPage } = this.props;
+    const { products, request, pages, presentPage } = this.props;
     const { loadProductPage } = this;
 
     if (
       request.pending === false &&
       request.success === true &&
-      products.length > 0 &&
-      pagination === true
+      products.length > 0
     ) {
       return (
         <>
@@ -40,17 +39,6 @@ class Products extends React.Component {
             onPageChange={loadProductPage}
             initialPage={presentPage}
           />
-        </>
-      );
-    } else if (
-      request.pending === false &&
-      request.success === true &&
-      products.length > 0 &&
-      pagination === false
-    ) {
-      return (
-        <>
-          <ProductList products={products} />
         </>
       );
     } else if (request.pending === false && request.error != null) {
@@ -81,12 +69,6 @@ Products.propTypes = {
   ),
   resetRequest: PropTypes.func.isRequired,
   loadProductByPage: PropTypes.func.isRequired
-};
-
-Products.defaultProps = {
-  initialPage: 1,
-  productsPerPage: 6,
-  pagination: true
 };
 
 export default Products;
