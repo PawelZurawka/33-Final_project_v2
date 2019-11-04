@@ -25,15 +25,13 @@ class Pagination extends React.Component {
     return (
       <div className='pagination'>
         <ul className='pagination__list'>
-          {presentPage > 1 ? (
+          {presentPage > 1 && (
             <li
               className='pagination__list__item'
               onClick={() => changePage(presentPage - 1)}
             >
               &lt;
             </li>
-          ) : (
-            ''
           )}
           {[...Array(pages)].map((el, page) => (
             <li
