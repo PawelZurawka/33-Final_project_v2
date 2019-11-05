@@ -1,5 +1,6 @@
 import React from 'react';
 //import { Card, CardText, Row, Col } from 'reactstrap';
+//import 'bootstrap/dist/css/bootstrap.min.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import PageTitle from '../../../components/common/PageTitle/PageTitle';
 
