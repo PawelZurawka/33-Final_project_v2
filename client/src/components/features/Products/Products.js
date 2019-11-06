@@ -12,10 +12,10 @@ class Products extends React.Component {
     loadProductByPage(initialPage || 1, productPerPage || 6);
   }
 
-  // componentWillUnmount() {
-  //   const { resetRequest } = this.props;
-  //   resetRequest();
-  // }
+  componentWillUnmount() {
+    const { resetRequest } = this.props;
+    resetRequest();
+  }
 
   loadProductPage = page => {
     const { loadProductByPage, productPerPage } = this.props;
