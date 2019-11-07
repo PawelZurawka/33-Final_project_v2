@@ -4,7 +4,7 @@ import ProductSummary from '../ProductSummary/ProductSummary';
 import './ProductList.scss';
 
 const ProductList = ({ products }) => (
-  <section className='products-list'>
+  <section className='products-list row'>
     {products.map(product => (
       <ProductSummary key={product.id} {...product} />
     ))}

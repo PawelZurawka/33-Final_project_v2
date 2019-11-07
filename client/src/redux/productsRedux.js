@@ -17,6 +17,16 @@ export const getCartProducts = ({ products }) => {
     };
   });
 };
+export const getProductsSort = ({ products }) => {
+  const sortProducts = [...products.data].sort((a, b) => {
+    if (a[products.key] > b[products.key])
+      return products.direction === 'asc' ? 1 : -1;
+    if (a[products.key] < b[products.key])
+      return products.direction === 'asc' ? -1 : 1;
+    return 0;
+  });
+  return sortProducts;
+};
 
 // action name creator
 const reducerName = 'products';
@@ -30,6 +40,7 @@ export const START_REQUEST = createActionName('START_REQUEST');
 export const END_REQUEST = createActionName('END_REQUEST');
 export const ERROR_REQUEST = createActionName('ERROR_REQUEST');
 export const RESET_REQUEST = createActionName('RESET_REQUEST');
+export const SORT_OPTIONS = createActionName('SORT_OPTIONS');
 
 /* ACTION CREATORS */
 export const loadProducts = payload => ({ payload, type: LOAD_PRODUCTS });
@@ -45,6 +56,7 @@ export const startRequest = () => ({ type: START_REQUEST });
 export const endRequest = () => ({ type: END_REQUEST });
 export const errorRequest = error => ({ error, type: ERROR_REQUEST });
 export const resetRequest = () => ({ type: RESET_REQUEST });
+export const sortOptions = payload => ({ payload, type: SORT_OPTIONS });
 
 /* INITIAL STATE */
 const initialState = {
@@ -53,6 +65,8 @@ const initialState = {
   amount: 0,
   productsPerPage: 6,
   presentPage: 1,
+  key: '',
+  direction: '',
   request: {
     pending: false,
     error: null,
@@ -148,6 +162,12 @@ export default function reducer(statePart = initialState, action = {}) {
       return {
         ...statePart,
         request: { pending: false, error: null, success: null }
+      };
+    case SORT_OPTIONS:
+      return {
+        ...statePart,
+        key: action.payload.key,
+        direction: action.payload.direction
       };
     default:
       return statePart;

@@ -1,39 +1,49 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import { Row, Col, Container, Button } from 'reactstrap';
-//import sort from '../../../utils/sort/sort';
-
 import './SideBar.scss';
 
-class SideBar extends React.Component {
-  render() {
-    return (
-      <Container>
-        <div className={'sidebar__header'}>
-          <h1>Sort by:</h1>
-        </div>
-        <Row>
-          <Col>
-            <Button color='link'>Name A - Z</Button>
-          </Col>
-        </Row>
-        <Row>
-          <Col>
-            <Button color='link'>Name Z - A</Button>
-          </Col>
-        </Row>
-        <Row>
-          <Col>
-            <Button color='link'>Prices from lowest</Button>
-          </Col>
-        </Row>
-        <Row>
-          <Col>
-            <Button color='link'>Prices from highest</Button>
-          </Col>
-        </Row>
-      </Container>
-    );
-  }
-}
+const SideBar = ({ sortOptions }) => {
+  const handleOnClick = (key, direction) => {
+    sortOptions({ key, direction });
+  };
+  return (
+    <Container className='sort-by'>
+      <h4>Sort by:</h4>
+      <Row>
+        <Col>
+          <Button color='link' onClick={() => handleOnClick('name', 'asc')}>
+            Name: A to Z
+          </Button>
+        </Col>
+      </Row>
+      <Row>
+        <Col>
+          <Button color='link' onClick={() => handleOnClick('name', 'desc')}>
+            Name: Z to A
+          </Button>
+        </Col>
+      </Row>
+      <Row>
+        <Col>
+          <Button color='link' onClick={() => handleOnClick('price', 'asc')}>
+            Price: low to high
+          </Button>
+        </Col>
+      </Row>
+      <Row>
+        <Col>
+          <Button color='link' onClick={() => handleOnClick('price', 'desc')}>
+            Price: high to low
+          </Button>
+        </Col>
+      </Row>
+    </Container>
+  );
+};
+
+SideBar.propTypes = {
+  sortOptions: PropTypes.func.isRequired
+};
 
 export default SideBar;

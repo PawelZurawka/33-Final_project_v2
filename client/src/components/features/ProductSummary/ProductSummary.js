@@ -14,16 +14,14 @@ import {
 import './ProductSummary.scss';
 
 const ProductSummary = ({ name, price, image }) => (
-  <div>
-    <Card>
-      <CardImg src={image} />
-      <CardBody>
-        <CardTitle>{name}</CardTitle>
-        <CardText>{price}</CardText>
-        <CardLink href={'/product'}></CardLink>
-      </CardBody>
-    </Card>
-  </div>
+  <Card className='col-6'>
+    <CardImg src={image} />
+    <CardBody>
+      <CardTitle>{name}</CardTitle>
+      <CardText>{price}</CardText>
+      <CardLink href={'/product'}></CardLink>
+    </CardBody>
+  </Card>
 );
 
 ProductSummary.propTypes = {
