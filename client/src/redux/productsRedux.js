@@ -4,7 +4,7 @@ import { API_URL } from '../config';
 /* SELECTORS */
 export const getProducts = ({ products }) => products.data;
 export const getSingleProduct = ({ products }) => products.singleProduct;
-export const getProductsCounter = ({ products }) => products.data.length;
+export const getProductsCounter = ({ products }) => products.amount;
 export const getRequest = ({ products }) => products.request;
 export const getPages = ({ products }) =>
   Math.ceil(products.amount / products.productsPerPage);
