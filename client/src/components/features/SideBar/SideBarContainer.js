@@ -8,16 +8,16 @@ const SideBarContainer = ({ sortOptions }) => {
   return <SideBar sortOptions={sortOptions} />;
 };
 
-SideBarContainer.propTypes = {
-  sortOptions: PropTypes.func.isRequired
-};
-
 const mapStateToProps = state => ({
   products: getProductsSort(state)
 });
 
 const mapDispatchToProps = {
   sortOptions
+};
+
+SideBarContainer.propTypes = {
+  sortOptions: PropTypes.func.isRequired
 };
 
 export default connect(
