@@ -1,8 +1,7 @@
 import React from 'react';
 import { PropTypes } from 'prop-types';
 import 'bootstrap/dist/css/bootstrap.min.css';
-//import Button from '../../common/Button/Button';
-//import SmallTitle from '../../common/SmallTitle/SmallTitle';
+import Button from '../../common/Button/Button';
 import {
   Card,
   CardImg,
@@ -19,6 +18,8 @@ const ProductSummary = ({ name, price, image }) => (
     <CardBody>
       <CardTitle>{name}</CardTitle>
       <CardText>{price}</CardText>
+      <Button>See details</Button>
+      <Button>Add to cart</Button>
       <CardLink href={'/product'}></CardLink>
     </CardBody>
   </Card>
