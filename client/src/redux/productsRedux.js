@@ -40,7 +40,7 @@ export const START_REQUEST = createActionName('START_REQUEST');
 export const END_REQUEST = createActionName('END_REQUEST');
 export const ERROR_REQUEST = createActionName('ERROR_REQUEST');
 export const RESET_REQUEST = createActionName('RESET_REQUEST');
-export const SORT_OPTIONS = createActionName('SORT_OPTIONS');
+export const SORT = createActionName('SORT');
 
 /* ACTION CREATORS */
 export const loadProducts = payload => ({ payload, type: LOAD_PRODUCTS });
@@ -56,7 +56,7 @@ export const startRequest = () => ({ type: START_REQUEST });
 export const endRequest = () => ({ type: END_REQUEST });
 export const errorRequest = error => ({ error, type: ERROR_REQUEST });
 export const resetRequest = () => ({ type: RESET_REQUEST });
-export const sortOptions = payload => ({ payload, type: SORT_OPTIONS });
+export const sort = payload => ({ payload, type: SORT });
 
 /* INITIAL STATE */
 const initialState = {
@@ -163,7 +163,7 @@ export default function reducer(statePart = initialState, action = {}) {
         ...statePart,
         request: { pending: false, error: null, success: null }
       };
-    case SORT_OPTIONS:
+    case SORT:
       return {
         ...statePart,
         key: action.payload.key,

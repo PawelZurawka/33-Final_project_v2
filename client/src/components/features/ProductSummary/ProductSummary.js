@@ -18,8 +18,8 @@ const ProductSummary = ({ name, price, image }) => (
     <CardBody>
       <CardTitle>{name}</CardTitle>
       <CardText>{price}</CardText>
-      <Button>See details</Button>
-      <Button>Add to cart</Button>
+      <Button variant='primary'>See details</Button>
+      <Button variant='primary'>Add to cart</Button>
       <CardLink href={'/product'}></CardLink>
     </CardBody>
   </Card>

@@ -3,9 +3,9 @@ import PropTypes from 'prop-types';
 import { Row, Col, Container, Button } from 'reactstrap';
 import './SideBar.scss';
 
-const SideBar = ({ sortOptions }) => {
+const SideBar = ({ sort }) => {
   const handleOnClick = (key, direction) => {
-    sortOptions({ key, direction });
+    sort({ key, direction });
   };
   return (
     <Container className='sort-by'>
@@ -43,7 +43,7 @@ const SideBar = ({ sortOptions }) => {
 };
 
 SideBar.propTypes = {
-  sortOptions: PropTypes.func.isRequired
+  sort: PropTypes.func.isRequired
 };
 
 export default SideBar;

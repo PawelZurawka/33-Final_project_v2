@@ -1,11 +1,11 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
-import { sortOptions, getProductsSort } from '../../../redux/productsRedux';
+import { sort, getProductsSort } from '../../../redux/productsRedux';
 import SideBar from './SideBar';
 
-const SideBarContainer = ({ sortOptions }) => {
-  return <SideBar sortOptions={sortOptions} />;
+const SideBarContainer = ({ sort }) => {
+  return <SideBar sort={sort} />;
 };
 
 const mapStateToProps = state => ({
@@ -13,11 +13,11 @@ const mapStateToProps = state => ({
 });
 
 const mapDispatchToProps = {
-  sortOptions
+  sort
 };
 
 SideBarContainer.propTypes = {
-  sortOptions: PropTypes.func.isRequired
+  sort: PropTypes.func.isRequired
 };
 
 export default connect(
