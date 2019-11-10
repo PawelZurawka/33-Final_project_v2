@@ -17,7 +17,7 @@ const ProductSummary = ({ name, price, image }) => (
     <CardImg src={image} />
     <CardBody>
       <CardTitle>{name}</CardTitle>
-      <CardText>{price}</CardText>
+      <CardText>$ {price}</CardText>
       <Button variant='primary'>See details</Button>
       <Button variant='primary'>Add to cart</Button>
       <CardLink href={'/product'}></CardLink>
@@ -29,7 +29,7 @@ ProductSummary.propTypes = {
   id: PropTypes.string,
   image: PropTypes.string,
   name: PropTypes.string,
-  price: PropTypes.string
+  price: PropTypes.number
 };
 
 export default ProductSummary;

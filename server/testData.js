@@ -7,7 +7,7 @@ const loadTestData = async () => {
       name: 'Waterproof Jacket',
       description:
         'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent et nibh sit amet ipsum mollis condimentum.',
-      price: '$ 599.9',
+      price: 599.9,
       image: '/images/waterproof_jacket.jpg'
     },
     {
@@ -15,7 +15,7 @@ const loadTestData = async () => {
       name: 'Boots',
       description:
         'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent et nibh sit amet ipsum mollis condimentum.',
-      price: '$ 329.9',
+      price: 329.9,
       image: '/images/boots.jpg'
     },
     {
@@ -23,7 +23,7 @@ const loadTestData = async () => {
       name: 'Down Jacket',
       description:
         'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent et nibh sit amet ipsum mollis condimentum.',
-      price: '$ 399.9',
+      price: 399.9,
       image: '/images/down_jacket.jpg'
     },
     {
@@ -31,7 +31,7 @@ const loadTestData = async () => {
       name: 'Softshell Jacket',
       description:
         'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent et nibh sit amet ipsum mollis condimentum.',
-      price: '$ 259.9',
+      price: 259.9,
       image: '/images/softshell_jacket.jpg'
     },
     {
@@ -39,7 +39,7 @@ const loadTestData = async () => {
       name: 'Climbing Shoes',
       description:
         'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent et nibh sit amet ipsum mollis condimentum.',
-      price: '$ 199.9',
+      price: 199.9,
       image: '/images/climbing_shoes.jpg'
     },
     {
@@ -47,7 +47,7 @@ const loadTestData = async () => {
       name: 'Backpack',
       description:
         'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent et nibh sit amet ipsum mollis condimentum.',
-      price: '$ 299.9',
+      price: 299.9,
       image: '/images/backpack.jpg'
     },
     {
@@ -55,7 +55,7 @@ const loadTestData = async () => {
       name: 'Sandals',
       description:
         'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent et nibh sit amet ipsum mollis condimentum.',
-      price: '$ 59.9',
+      price: 59.9,
       image: '/images/sandals.jpg'
     },
     {
@@ -63,7 +63,7 @@ const loadTestData = async () => {
       name: 'T-shirt',
       description:
         'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent et nibh sit amet ipsum mollis condimentum.',
-      price: '$ 39.9',
+      price: 39.9,
       image: '/images/t-shirt.jpg'
     },
     {
@@ -71,7 +71,7 @@ const loadTestData = async () => {
       name: 'Stove',
       description:
         'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent et nibh sit amet ipsum mollis condimentum.',
-      price: '$ 59.9',
+      price: 59.9,
       image: '/images/stove.jpg'
     },
     {
@@ -79,7 +79,7 @@ const loadTestData = async () => {
       name: 'Socks',
       description:
         'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent et nibh sit amet ipsum mollis condimentum.',
-      price: '$ 29.9',
+      price: 29.9,
       image: '/images/socks.jpg'
     },
     {
@@ -87,7 +87,7 @@ const loadTestData = async () => {
       name: 'Headlamp',
       description:
         'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent et nibh sit amet ipsum mollis condimentum.',
-      price: '$ 259.9',
+      price: 259.9,
       image: '/images/headlamp.jpg'
     },
     {
@@ -95,7 +95,7 @@ const loadTestData = async () => {
       name: 'Sleeping Bag',
       description:
         'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent et nibh sit amet ipsum mollis condimentum.',
-      price: '$ 259.9',
+      price: 259.9,
       image: '/images/sleeping_bag.jpg'
     },
     {
@@ -103,7 +103,7 @@ const loadTestData = async () => {
       name: 'Sport Watch',
       description:
         'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent et nibh sit amet ipsum mollis condimentum.',
-      price: '$ 1099.9',
+      price: 1099.9,
       image: '/images/sport_watch.jpg'
     },
     {
@@ -111,7 +111,7 @@ const loadTestData = async () => {
       name: 'Compass',
       description:
         'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent et nibh sit amet ipsum mollis condimentum.',
-      price: '$ 79.9',
+      price: 79.9,
       image: '/images/compass.jpg'
     },
     {
@@ -119,7 +119,7 @@ const loadTestData = async () => {
       name: 'Trekking Poles',
       description:
         'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent et nibh sit amet ipsum mollis condimentum.',
-      price: '$ 109.9',
+      price: 109.9,
       image: '/images/trekking_poles.jpg'
     },
     {
@@ -127,7 +127,7 @@ const loadTestData = async () => {
       name: 'Harness',
       description:
         'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent et nibh sit amet ipsum mollis condimentum.',
-      price: '$ 149.9',
+      price: 149.9,
       image: '/images/harness.jpg'
     },
     {
@@ -135,7 +135,7 @@ const loadTestData = async () => {
       name: 'Crampons',
       description:
         'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent et nibh sit amet ipsum mollis condimentum.',
-      price: '$ 149.9',
+      price: 149.9,
       image: '/images/crampons.jpg'
     }
   ];
