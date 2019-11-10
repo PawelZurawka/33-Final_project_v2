@@ -13,28 +13,28 @@ const SideBar = ({ sort }) => {
       <Row>
         <Col>
           <Button color='link' onClick={() => handleOnClick('name', 'asc')}>
-            Name: A to Z
+            Name: A - Z
           </Button>
         </Col>
       </Row>
       <Row>
         <Col>
           <Button color='link' onClick={() => handleOnClick('name', 'desc')}>
-            Name: Z to A
+            Name: Z - A
           </Button>
         </Col>
       </Row>
       <Row>
         <Col>
           <Button color='link' onClick={() => handleOnClick('price', 'asc')}>
-            Price: low to high
+            Price: low - high
           </Button>
         </Col>
       </Row>
       <Row>
         <Col>
           <Button color='link' onClick={() => handleOnClick('price', 'desc')}>
-            Price: high to low
+            Price: high - low
           </Button>
         </Col>
       </Row>
