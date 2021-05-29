@@ -1,8 +1,8 @@
-import React from 'react';
-import PageTitle from '../../common/PageTitle/PageTitle';
-import Footer from '../../features/Footer/Footer';
+import React from 'react'
+import PageTitle from '../../common/PageTitle/PageTitle'
+import Footer from '../../features/Footer/Footer'
 
-const StatutePage = () => (
+const Rules = () => (
   <>
     <div>
       <PageTitle>Rules</PageTitle>
@@ -106,6 +106,6 @@ const StatutePage = () => (
     </div>
     <Footer />
   </>
-);
+)
 
-export default StatutePage;
+export default Rules
